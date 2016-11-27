@@ -1,0 +1,10 @@
+<ion-view view-title="EzReddit">
+    <ion-content class="padding">
+      <div class="list" ng-click="openComments()" >
+        <div class="item item-thumbnail-left" ng-repeat="post in posts">
+          <img src="{{post.data.thumbnail}}" alt=""/>
+          <h3>{{post.data.title}}</h3>
+        </div>
+      </div>
+    </ion-content>
+</ion-view>

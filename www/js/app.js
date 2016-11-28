@@ -1,8 +1,3 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
 angular.module('redditApp', ['ionic'])
 
 .run(function($ionicPlatform) {
@@ -29,6 +24,11 @@ angular.module('redditApp', ['ionic'])
             templateUrl: 'templates/posts.html',
             controller: 'PostsController',
             controllerAs: 'posts'
+        }).state('comments', {
+                    url: '/comments/',
+                    templateUrl: 'templates/comments.html',
+                    controller: 'CommentsController',
+                    controllerAs: 'comments'
         });
     $urlRouterProvider.otherwise('/posts');
 });

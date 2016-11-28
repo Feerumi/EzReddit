@@ -1,10 +1,23 @@
 <ion-view>
-    <ion-nav-title>{{ comicDetail.comic.title }}</ion-nav-title>
     <ion-content class="padding">
-        <p>{{ comicDetail.comic.description }}</p>
-
-        <div class="list">
-            <div class="item" ng-repeat="character in comicDetail.comic.characters">{{ character }}</div>
+        <div class="Post">
+            <div class="contentContainer">
+                <img class="postImage" ng-if="content.thumbnail != 'self'" src="{{content.thumbnail}}" alt=""/>
+                <h3 class="postTitle">{{content.title}}</h3>
+                <div class="content">
+                    <p class="postText">{{content.selftext}}</p>
+                </div>
+            </div>
+            <div class="comments">
+                <div class="comment" ng-repeat="comment in comments">
+                    <div class="commentPoster">
+                        <p>{{comment.data.author}} - {{comment.data.score}}</p>
+                    </div>
+                    <div  id="{{comment.data.id}}" class="commentContent">
+                        {{parseHTML(comment.data)}}
+                    </div>
+                </div>
+            </div>
         </div>
     </ion-content>
 </ion-view>

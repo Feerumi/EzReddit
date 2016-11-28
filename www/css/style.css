@@ -1,8 +1,29 @@
 /* Empty. Add your own CSS if you like */
 
-.left{
-  position: relative;
-  float:left;
-  top: 10px;
-  left: 20px;
+.postImage{
+    display: inline-block;
+}
+
+.postTitle {
+    display: inline-block;
+}
+
+.p
+
+.contentContainer {
+    border: solid 1px;
+    margin-bottom: 10px;
+}
+
+.content {
+    margin: 10px;
+}
+
+.comment {
+    border: solid 1px;
+    margin-bottom: 1px;
+}
+
+.postText {
+    font-size: 1em;
 }
